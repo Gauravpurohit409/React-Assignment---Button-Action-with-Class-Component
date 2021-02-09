@@ -15,12 +15,13 @@ class App extends Component {
     	return(
     		<div id="main">
 				{ /* Do not remove this main div!! */ }
-				<p id= "para" style = {{display: this.state.visibility}}>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>
+				{/* <p id= "para" style = {{display: this.state.visibility}}>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p> */}
 				<button id = "click" onClick ={() =>{
-					this.setState({
-						visibility : "block",
-					});
-
+					const main = document.querySelector("#main");
+					const p = document.createElement("p");
+					p.setAttribute("id","para");
+					p.innerHTML = "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"; 
+					main.appendChild(p);
 				}}>Click!</button>
     		</div>
     	);
