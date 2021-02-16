@@ -17,11 +17,11 @@ class App extends Component {
 				{ /* Do not remove this main div!! */ }
 			
 				{this.state.renderP ?
-		         <p id="para">"Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"</p>
+		         <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>
     
 				:
 					<button id = "click" onClick={()=>{
-						console.log(this.state.renderP);
+						// console.log(this.state.renderP);
 						this.setState({
 							renderP : true,
 						});
